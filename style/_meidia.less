@@ -1,0 +1,146 @@
+@media screen and (min-width:900px) {
+	#media {
+		box-sizing: border-box;
+		background-image: url(../img/bg11.jpg);
+		font-size: 62.5%;
+		line-height: 2rem;
+		header {
+			margin-bottom: 2%;
+			.wra-logo {
+				float: left;
+				width: 30%;
+			}
+			.wra-nav {
+				float: right;
+				width: 50%;
+				>h1,
+				>ul {
+					display: block;
+					text-align: left;
+					width: 100%;
+				}
+				>h1 {
+					font-size: 1.3rem;
+					margin-bottom: 2%;
+					letter-spacing: 0.4em;
+					line-height: inherit;
+				}
+				>ul {
+					li {
+						margin-right: 1.2rem;
+						margin-bottom: 0;
+						font-size: 0.9rem;
+						display: inline-block;
+						text-transform: uppercase;
+						border-bottom: none;
+					}
+				}
+			}
+			.wra-menu {
+				width: 10%;
+				height: 40px;
+				line-height: 40px;
+				font-size: 40px;
+				font-weight: 100;
+				text-align: right;
+				border: none;
+				margin-top: 0;
+				color: #2C3233;
+				&:hover {
+					color: #33FFFF;
+				}
+			}
+			.wra-gotop {
+				@width: 40px;
+				//		border: 1px solid #000;
+				width: @width;
+				height: @width;
+				line-height: @width;
+				text-align: center;
+				font-size: @width;
+				top: 87%;
+				right: 6%;
+				margin-top: -20px;
+				color: #2C3233;
+				border: none;
+				&:hover {
+					color: #33FFFF;
+				}
+			}
+		}
+		.menus {
+			width: 92%;
+			left: 4%;
+			>div {
+				line-height: inherit;
+				margin-bottom: 2%;
+				h3 {
+					font-size: 0.9rem;
+				}
+				nav {
+					a {
+						font-size: 0.7rem;
+					}
+				}
+			}
+			.code {
+				float: right;
+				width: 60%;
+			}
+			.life {
+				float: left;
+				width: 30%;
+			}
+		}
+		.contents {
+			margin-bottom: 4%;
+			>div{
+				padding: 2% 0;
+				border-top: 1px solid #E0E0E0;
+			}
+			.content-des {
+
+				float: left;
+				width: 30%;
+				h2 {
+					font-size: 1rem;
+					small {
+						font-size: small;
+					}
+				}
+				p {
+					font-size: 0.7rem;
+				}
+			}
+			.content-link {
+				float: right;
+				width: 60%;
+				a{
+					width: 90%;
+				}
+			}
+		}
+		.contents.nth1 {
+			.content-link a {
+				width: 70%;
+				img {
+					width: 100%;
+				}
+			}
+		}
+		.contents.nth2 {
+			.content-link a {
+				width: 60%;
+				img {
+					width: 100%;
+				}
+			}
+		}
+		footer {
+			span {
+				text-align: center;
+				font-size: 1rem;
+			}
+		}
+	}
+}

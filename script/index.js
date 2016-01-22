@@ -13,7 +13,9 @@ $(document).ready(function () {
 		USE: {
 			menuBtnStatus: false,
 			bodyMTop: null,
-			statuBtns: null
+			statuBtns: null,
+			resizeTimer: null
+
 		},
 		METHODS: {
 
@@ -23,14 +25,14 @@ $(document).ready(function () {
 
 	ME.USE.statuBtns = [ME.DOM.$menusCloseBtn, ME.DOM.$menusOpenBtn];
 	// 让页面滚到目标位置的
-	ME.METHODS.scrollTo = function (dest, offset,dt) {
+	ME.METHODS.scrollTo = function (dest, offset, dt) {
 		var top = 0;
 		if (dest) {
 			top = (dest.offset().top + (offset || 0)) | 0;
 		}
 		ME.DOM.$page.animate({
 			scrollTop: top
-		}, dt||1000, 'swing');
+		}, dt || 1000, 'swing');
 	};
 	// 改变关闭按钮的显示状态
 	ME.METHODS.changeBtnStatus = function (status) {
@@ -43,7 +45,7 @@ $(document).ready(function () {
 	};
 	//	回到顶部
 	ME.DOM.$goTopBtn.on('click', function (event) {
-		ME.METHODS.scrollTo(null,800);
+		ME.METHODS.scrollTo(null, 800);
 	});
 	//	目录开关
 	ME.DOM.$menusBtn.on('click', function (event) {
@@ -64,7 +66,15 @@ $(document).ready(function () {
 		var dest = $(this).attr('href'),
 			$dest = $(dest);
 		if (!$dest) return console.log('目标不存在！');
-		ME.METHODS.scrollTo($dest,-20);
+		ME.METHODS.scrollTo($dest, -20);
 
+	});
+	// 监听屏幕变化，节流
+	$(window).resize(function (event) {
+		if (ME.USE.resizeTimer) return;
+		ME.USE.resizeTimer = setTimeout(function () {
+			ME.USE.bodyMTop = (ME.DOM.$menusWra.height() + 70) | 0;
+			ME.USE.resizeTimer=null;
+		}, 500);
 	});
 });

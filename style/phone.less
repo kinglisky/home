@@ -31,18 +31,18 @@ html {
 }
 
 body {
+	display: block;
+	position: relative;
 	box-sizing: border-box;
-	width: 92%;
+	width: 94%;
 	margin: 3% auto;
 	padding: 2% 3%;
 	background-color: #fff;
-	background-image: url(../img/bg11.jpg);
 	color: #2C3233;
 	font-family: "proxima-nova", "Gotham", Helvetica, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", "YouYuan", "幼圆", serif;
-	font-size: 62.5%;
-	line-height: 2rem;
+	font-size: 1.8rem;
+	line-height: 5rem;
 	box-shadow: 0px 0px 20px 0px #000;
-	//	transition: all 0.5s;
 }
 
 header {
@@ -50,63 +50,50 @@ header {
 	overflow: hidden;
 	position: relative;
 	padding: 2% 0;
-	margin-bottom: 2%;
+	margin-bottom: 8rem;
 	.wra-logo {
-		display: block;
-		//		position: absolute;
-		float: left;
-		width: 30%;
-		overflow: hidden;
-		//		border-left:1px dotted #ccc;
 		img {
 			display: block;
 			width: 100%;
-//			float: left;
 		}
 	}
 	.wra-nav {
 		display: block;
-		//		position: absolute;
-		float: right;
-		width: 50%;
-		>h1,
-		>ul {
-			display: block;
-			text-align: left;
-			width: 100%;
-		}
+		width: 100%;
 		>h1 {
-			font-size: 1.3rem;
-			margin-bottom: 2%;
-			letter-spacing: 0.4em;
-			//		padding: 2% 0;
+			font-size: 5rem;
+			margin-bottom: 5rem;
+			line-height: 6rem;
 		}
 		>ul {
 			li {
 				margin-right: 1.2rem;
-				font-size: 0.9rem;
-				display: inline-block;
+				margin-bottom: 2rem;
+				font-size: 3rem;
 				font-weight: normal;
 				letter-spacing: 0.4em;
 				padding: .4em 0;
 				text-decoration: none;
 				text-transform: uppercase;
+				border-bottom: 1px dotted #656565;
 			}
 		}
 	}
 	.wra-menu {
 		display: block;
 		float: right;
-		width: 10%;
-		height: 40px;
-		line-height: 40px;
-		font-size: 40px;
+		width: 6rem;
+		height: 6rem;
+		line-height: 6rem;
+		font-size: 5rem;
 		font-weight: 100;
-		text-align: right;
+		text-align: center;
 		cursor: pointer;
-		//		border: 1px solid #E0E0E0;
 		border-radius: 5px;
 		transition: all 0.3s;
+		color: #E0E0E0;
+		border: 5px solid #E0E0E0;
+		margin-top: 2%;
 		i.hidden {
 			display: none;
 		}
@@ -115,17 +102,19 @@ header {
 		}
 	}
 	.wra-gotop {
-		@width: 40px;
+		@width: 6rem;
 		//		border: 1px solid #000;
+		width: @width;
 		height: @width;
 		line-height: @width;
 		text-align: center;
-		font-size: @width;
+		font-size: 5rem;
 		position: fixed;
 		top: 87%;
-		right: 7%;
-		margin-top: -20px;
+		right: 6.5%;
 		cursor: pointer;
+		color: #E0E0E0;
+		border: 5px solid #E0E0E0;
 		transition: all 0.3s;
 		&:hover {
 			color: #33FFFF;
@@ -140,16 +129,17 @@ header {
 	//	border-bottom: 1px dotted #ccc;
 	//	border-top: 1px dotted #ccc;
 	//	border-radius:10px;
-	width: 92%;
+	width: 94%;
 	top: 3%;
-	left: 4%;
+	left: 3%;
 	padding: 2% 3%;
 	color: #C4CBCD;
 	.clearfix;
 	>div {
-		margin-bottom: 2%;
+		margin-bottom: 3rem;
+		line-height: 5rem;
 		h3 {
-			font-size: 0.9rem;
+			font-size: 5rem;
 			display: inline-block;
 			font-weight: normal;
 			letter-spacing: 0.4rem;
@@ -162,7 +152,7 @@ header {
 			width: 100%;
 			a {
 				display: inline-block;
-				font-size: 0.7rem;
+				font-size: 4rem;
 				border-bottom: 1px dotted #656565;
 				margin-right: 2%;
 				color: #979fa1;
@@ -173,50 +163,30 @@ header {
 			}
 		}
 	}
-	.code {
-		float: right;
-		width: 60%;
-	}
-	.life {
-		float: left;
-		width: 30%;
-	}
 }
 
 .contents {
 	.clearfix;
 	overflow: hidden;
-	margin-bottom: 4%;
+	margin-bottom: 8rem;
 	>div {
-		padding: 2% 0;
+		padding: 4rem 0;
 		box-sizing: border-box;
-		//		border: 1px solid #ccc;
-		border-top: 1px solid #E0E0E0;
-		//		box-shadow: 10px 10px 20px 0px #000;
 	}
 	.content-des {
-		float: left;
-		width: 30%;
+		border-top: 1px solid #E0E0E0;
 		h2 {
-			//			width: 1rem;
-			font-size: 1rem;
+			font-size: 4rem;
 			color: #323232;
-			//			border: 1px solid #ccc;
 			small {
 				margin: 0 2%;
-				font-size: small;
 				color: #DC602E;
 			}
 		}
-		p.nth1 {
-			text-indent: 0;
-		}
 		p {
 			padding: 2% 0;
-			//			text-indent: 2em;
-			font-size: 0.7rem;
+			font-size: 3rem;
 			font-weight: 100;
-			//			margin-top: 3%;
 			color: #2C3233;
 			a {
 				margin: 0 2%;
@@ -229,15 +199,14 @@ header {
 		}
 	}
 	.content-link {
-		float: right;
-		width: 60%;
+		width: 100%;
 		a {
 			box-sizing: border-box;
 			//			padding: 2%;
 			border-radius: 5px;
 			//			border: 1px solid #E0E0E0;
 			//			box-shadow: 0px 0px 20px 0px #E0E0E0;
-			width: 90%;
+			width: 100%;
 			display: block;
 			opacity: 1;
 			transition: all 0.3s;
@@ -248,27 +217,7 @@ header {
 				display: block;
 				width: 100%;
 				border-radius: 5px;
-				//				border: 1px solid #ccc;
-				//				box-shadow: 0px 0px 0px 0px #000;
 			}
-		}
-	}
-}
-
-.contents.nth1 {
-	.content-link a {
-		width: 70%;
-		img {
-			width: 100%;
-		}
-	}
-}
-
-.contents.nth2 {
-	.content-link a {
-		width: 60%;
-		img {
-			width: 100%;
 		}
 	}
 }
@@ -277,14 +226,11 @@ footer {
 	margin-top: 5%;
 	border-top: 1px solid #E0E0E0;
 	padding: 2% 0;
-	img {
-		display: block;
-		width: 100%;
-		margin: 0 auto;
-	}
 	span {
+		font-size: 3rem;
 		margin-top: 2%;
 		display: block;
-		text-align: center;
+		text-align: left;
 	}
 }
+@import "_meidia.less";
