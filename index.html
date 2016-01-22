@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<title>陈南的主页</title>
+	<link rel="stylesheet" href="style/index.css">
+</head>
+
+<body>
+	<header >
+		<div class="wra-logo"><img src="img/0.new.gif"></img>
+		</div>
+		<div class="wra-menu" id="menus-btn"><i class="icon-cross hidden"></i><i class="icon-menu"></i></div>
+		<div class="wra-nav">
+			<h1>有的鱼是永远关不住的，因为它们属于天空。</h1>
+			<ul>
+				<li><a href="http://kinglisky.github.io/" target="_blank" title="我的简历">Resume</a></li>
+				<li><a href="http://kingli.coding.io/" target="_blank" title="我的博客">Blog</a></li>
+				<li><a href="https://github.com/kinglisky" target="_blank" title="gitHub账户">GitHub</a></li>
+				<li><a href="https://coding.net/u/kingli" target="_blank" title="Coding账户">Coding</a></li>
+
+			</ul>
+		</div>
+		<div class="wra-gotop" id="go-top"><i class="icon-arrow-up"></i></div>
+	</header>
+	<section class="menus" id="menus-wra">
+		<div class="life">
+			<h3>Life:</h3>
+			<nav>
+				<a href="#lion">三月的狮子</a>
+				<a href="#letter">Letter</a>
+				<a href="#bigfish">那些游弋于天空的大鱼</a>
+			</nav>
+		</div>
+		<div class="code">
+			<h3>Code:</h3>
+			<nav>
+				<a href="#lowpoly">Loy Poly图片风格化工具</a>
+				<a href="#gamechatroom">基于H5与node的多人在线游戏聊天室</a>
+			</nav>
+		</div>
+	</section>
+	<section class="contents nth1" id="lion">
+		<div class="content-des">
+			<h2>三月的狮子<small> 2016.01.20</small></h2>
+			<p>March comes in like a lion and goes out like a lamb.</p>
+			<p>原文大意是：三月开始的时候通常春寒料峭，可结束时往往气候趋于温和。</p>
+			<p>各种空间头像用的都是这张图，超喜欢的一部漫画--《三月的狮子》，据说16年秋季动画化了，16年又多一份期待，话说《大鱼海棠》二月份上映靠不靠谱啊？</p>
+			<p>突然间就快毕业了，年后准备实习工作了，好多小伙伴都已经找到了不错的工作。自己总是慢吞吞的，各种忐忑。</p>
+			<p>早早放假滚回家了，家里的冬天就是冷。虽说是南方，但也是个冬天会下雪的奇葩地方，摸着键盘打字手好冰。</p>
+			<p>新年也快到了，这两天这两天准备投简历了，希望能找到一份不错的工作。</p>
+			<p>贴个狮子MAD剪辑<a href="http://www.bilibili.com/video/av1855143/" target="_blank">《停驻六月的我、迷失在你三月的笑容里》<i class="icon-link"></i></a></p>
+		</div>
+		<div class="content-link">
+			<a href="#"><img src="img/lion.png" alt=""></a>
+		</div>
+	</section>
+	<section class="contents nth2" id="lowpoly">
+		<div class="content-des">
+			<h2>Low Poly 图片风格化工具<small>2016.01.12</small></h2>
+			<p>前段时间找图片素材的时候偶然间发现的一种图片风格，Low Poly风格，感觉很是神奇。找各种实现工具时，在知乎上面看到几个不错的前端实现，抱着试一试的想法，把其中的一个实现重构了一遍。</p>
+			<p>因为之前做的游戏，web workers用的比较熟悉，所以用workers重写一遍，把计算逻辑挪到了wokers，但效果不太好。于是想把canvas的imageData长数据分片处理，把主进程（姑且这么叫吧）和wokers两边的资源都利用起来，但算法上有些全局性的东西，以自己的水平暂时改不动........然后了解到ArrayBuffer这个神奇的东西，于是用ArrayBuffer做了一点小小的优化。</p>
+			<p>准备往这方面走，表示还有很长的一段路要走，下一个计划准备学习webGL。Fight！</p>
+			<p>贴个项目地址<a href="https://github.com/kinglisky/lowpoly" target="_blank">Low Poly 图片风格化工具 <i class="icon-link"></i></a>觉得还不错的，点个星星呗。</p>
+		</div>
+		<div class="content-link">
+			<a href="http://kinglisky.github.io/lowpoly/" target="_blank"><img src="img/LowPoly.png" alt=""></a>
+		</div>
+	</section>
+	<section class="contents nth3" id="gamechatroom">
+		<div class="content-des">
+			<h2>基于H5与node的游戏聊天室<small>2015.12.18</small></h2>
+			<p>算是自己这学期做的一个比较复杂的例子，记得是从十一过后开始做的，当时一股脑的想做一个类似RBG的小游戏，找了很多游戏引擎，国内出名的游戏的引擎都比较大，下了个白鹭玩玩，TypeScript不是我的菜呀。最后选择了Quintus，人家才60多K，支持Tiled，这不是正是我要找的吗？</p>
+			<p>然后发现自己算是掉进坑里，文档是英文就算了，它还不全，国内又没有资源。最后硬是自己一边看源代码，一边翻译学的。</p>
+			<p>过了一段时间以后，发现做游戏最重要的还是素材，翻遍各大网站，得到的资源的都是绿色调调的RGB游戏地图块，图块小，不好看，又占内存。还是得多发点时间get点美工技能啊！</p>
+			<p>这就是那段时间挖坑的结果，往后想尝试一下svg，重点学习一下Snap.js</p>
+			<p>项目地址
+				<a href="https://github.com/kinglisky/RIACharRoom" target="_blank">基于H5与Node的富媒体多人在线(游戏)聊天室 <i class="icon-link"></i></a> 点点星星，耶~~~~
+			</p>
+		</div>
+		<div class="content-link">
+			<a href="http://riacharoom.coding.io/" target="_blank"><img src="img/wuhou.png" alt="富媒体游戏聊天室"></a>
+		</div>
+	</section>
+	<section class="contents" id="letter">
+		<div class="content-des">
+			<h2>Letter<small>2015.11.17</small></h2>
+			<p>逛花瓣的时候发现的一个国人画师，特别特别的喜欢。</p>
+			<p>这个作品集叫做Letter，那种天空、大鱼、纸飞机、屋顶的意境，美爆了。</p>
+			<p>超级超级羡慕会画画的人。</p>
+			<p><a href="http://kingli.coding.io/2015/11/17/letter/" target="_blank">邦乔彦 Letter <i class="icon-link"></i></a></p>
+		</div>
+		<div class="content-link">
+			<a href="http://kingli.coding.io/2015/11/17/letter/" target="_blank"><img src="img/yu.png" alt=""></a>
+		</div>
+	</section>
+	<section class="contents" id="bigfish">
+		<div class="content-des">
+			<h2>那些游弋于天空的大鱼<small>2015.11.14</small></h2>
+			<p>有的鱼是永远永远跟关不住的，因为它们属于天空。出自《大鱼海棠》，很喜欢的一句话。</p>
+			<p>《大鱼》应经跳票很久，据说是年后的2月份上映，那时自己应该在找工作或是已经找到工作了，许个好愿吧！</p>
+			<p>这个学期很多计划都没完成，计划以外的时倒是做一些。也明白自己是那种不会计划安排的人，加油一点点改吧。</p>
+			<p>这两天搭的主页，空着也不好看，姑且写点东西吧！话说博客好久没写东西了~~~~~~</p>
+			<p>博客地址<a href="http://kingli.coding.io/" target="_blank">青鲤锦时的博客 <i class="icon-link"></i></a></p>
+		</div>
+		<div class="content-link">
+			<a href="http://kingli.coding.io/2015/11/14/dayu/" target="_blank"><img src="img/dayu.png" alt=""></a>
+		</div>
+	</section>
+	<footer>
+		<span>BY 青鲤锦时--陈南</span>
+	</footer>
+	<script src="script/jquery.min.js"></script>
+	<script src="script/index.js"></script>
+</body>
+
+</html>
